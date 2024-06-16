@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Player Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>CRICKET PLAYER MANAGEMENT</h1>
+    <nav>
+        <form action="{{ url_for('search_player') }}" method="GET">
+            <label for="jersey_number">Enter Jersey Number :</label>
+            <input type="number" id="jersey_number" name="jersey_number" required>
+            <button type="submit">Search</button>
+        </form>
+        <a href="{{ url_for('add_player') }}">
+            <button type="submit">ADD</button></a>
+        <a href="{{ url_for('player_list') }}">
+        <button type="submit">VIEW</button></a>
+        
+    </nav>
+   
+</body>
+</html>
